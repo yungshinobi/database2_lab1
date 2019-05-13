@@ -27,7 +27,7 @@ def task2_parse():
 
 def xml_to_xhtml():
     dom = etree.parse("results/task2.xml")
-    xslt = etree.parse("xslscripts/task2.xsl")
+    xslt = etree.parse("xslscripts/task2.xslt")
     transform = etree.XSLT(xslt)
     result = transform(dom)
     #print(result)
@@ -47,6 +47,6 @@ def do_task1():
 
 
 #do_task1()
-do_task2()
-xml_to_xhtml()
-#print_urls()
+#do_task2()
+#xml_to_xhtml()
+print_urls()
